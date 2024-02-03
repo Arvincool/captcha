@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body dir="rtl" bgcolor="black">
+    
+    <form id="form1" runat="server">
+        <div>
+            <div id="header">
+                <div id="header-container">
+
+                </div>
+            </div>
+            <h2>&nbsp;</h2>
+        <input type="text" id="txt1" runat="server"
+                style="border-style: none; width: 500px; height: 120px; border-radius: 10px; position: absolute;
+                right: 500px; border-color: initial; border-width: thin; background-color:navy; color:white; font-family: 'Curlz MT'; font-size: x-large; font-weight: bold; font-variant: normal; letter-spacing: 10pt; width: 120px; background-image: url('glitter_background_b4.gif');"
+                value="5AbD" />
+      <input type="button" onclick="show()" value="New" style="width: 90px; height: 50px; right: 700px; position: absolute;"  />
+            </div>
+        <asp:TextBox ID="txtverification" runat="server"></asp:TextBox>
+    &nbsp;<asp:Button ID="Button1" runat="server" Text="Check"
+            onclick="Button1_Click" />
+            &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblmsg" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+        </form>
+
+        <script language="javascript">
+            var a = 49, b = 65;
+            var c = 100;
+            var d = 70;
+            function show() {
+                if (a == 57) {
+                    a = 49;
+                }
+                var main = document.getElementById('txt1');
+                var a1 = String.fromCharCode(a);
+                var b1 = String.fromCharCode(b);
+                var c1 = String.fromCharCode(c);
+                var d1 = String.fromCharCode(d);
+                main.value = a1 + b1 + c1 + d1;
+                a = a + 1;
+                b = b + 1;
+                c = c + 1;
+                d = d + 1;
+            }
+
+
+            
+     </script>
+
+
+
+
+</body>
+</html>
